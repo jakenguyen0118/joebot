@@ -10,7 +10,7 @@ intents.members = True  # Subscribe to the privileged members intent.
 
 
 load_dotenv()
-TOKEN = 'Nzc1MjE1NDI2MTE1MjA3MTc4.X6jFoA.CYMYcCFiUKwp3HuWF7pkPErBU0U'
+TOKEN = 'Nzc1MjE1NDI2MTE1MjA3MTc4.X6jFoA.Z1uHiJkjx1hR70KyXwBamsYXm8E'
 GUILD = '775214377808429066'
 
 bot = discord.Client()
