@@ -10,7 +10,7 @@ intents.members = True  # Subscribe to the privileged members intent.
 
 
 load_dotenv()
-TOKEN = 'Nzc1MjE1NDI2MTE1MjA3MTc4.X6jFoA.Z1uHiJkjx1hR70KyXwBamsYXm8E'
+TOKEN = 'Nzc1MjE1NDI2MTE1MjA3MTc4.X6jFoA.LtJ1LLnPBD12g1A-seBV8qcIFfo'
 GUILD = '775214377808429066'
 
 bot = discord.Client()
@@ -50,6 +50,7 @@ async def learn(ctx):
         'D3 In Depth - https://www.d3indepth.com/force-layout/',
         'Framer Motion - https://www.framer.com/motion/',
         'Angular - https://angular.io/',
+        'Free Intro to Python - https://www.codecademy.com/learn/learn-python'
     ]
 
     response = random.choice(what_to_learn)
