@@ -10,8 +10,8 @@ intents.members = True  # Subscribe to the privileged members intent.
 
 
 load_dotenv()
-TOKEN = 'Nzc1MjE1NDI2MTE1MjA3MTc4.X6jFoA.LtJ1LLnPBD12g1A-seBV8qcIFfo'
-GUILD = '775214377808429066'
+TOKEN = os.getenv('DISCORD_TOKEN')
+GUILD = os.getenv('GUILD_TOKEN')
 
 bot = discord.Client()
 bot = commands.Bot(command_prefix='!', intents=intents)
