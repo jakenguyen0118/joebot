@@ -63,4 +63,16 @@ async def exit(ctx):
     response = "Exit Tickets…https://docs.google.com/forms/d/e/1FAIpQLSdCHYfZzSxaGurK5vf5ams5n7cdE7UCa4hghwYAlEhE_A_gFA/viewform"
     await ctx.send(response)
 
+
+@bot.command(name='saveme', help='Joe will ask you to share screen so that he can save you.')
+async def saveme(ctx):
+    msg = f'What is the problem {ctx.author.mention}? Let\'s share your screen...'
+    await ctx.send(msg)
+
+
+@bot.command(name='algos', help='Hand it over to the illustrious Kenny Cruz.')
+async def algos(ctx):
+    msg = f'It\'s algos time... I will hand it off to the ever so illustrious Kenny Cruz.'
+    await ctx.send(msg)
+
 bot.run(TOKEN)
