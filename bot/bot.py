@@ -56,7 +56,9 @@ async def learn(ctx):
         'Typescript - https://www.typescriptlang.org/',
         'Gatsby - https://www.gatsbyjs.com/',
         'NextJS - https://nextjs.org/',
-        'React Native - https://reactnative.dev/'
+        'React Native - https://reactnative.dev/',
+        'Auth for Ruby on Rails - https://tuts.alexmercedcoder.com/ruby-tut/',
+        'DevNursery - https://main.devnursery.com/'
     ]
 
     response = random.choice(what_to_learn)
@@ -92,6 +94,12 @@ async def algos(ctx):
 @bot.command(name='alex', help='Alex\'s YouTube Channel')
 async def alex(ctx):
     msg = f'I am not as good as Alex at making YouTube tutorials(for now)... so go check out his channel instead of mine. https://www.youtube.com/channel/UCoc4UCEetAt3htM3hV1dQgQ'
+    await ctx.send(msg)
+
+
+@bot.command(name='devnursery', help='All things you wish to learn taught by Alex Merced.')
+async def devnursery(ctx):
+    msg = f'Wish to learn anything and everything? Go to https://main.devnursery.com/'
     await ctx.send(msg)
 
 
