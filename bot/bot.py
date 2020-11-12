@@ -68,14 +68,14 @@ async def learn(ctx):
 @bot.command(name='exit', help='Link to submit our exit tickets.')
 async def exit(ctx):
 
-    response = "Exit Tickets…https://docs.google.com/forms/d/e/1FAIpQLSdCHYfZzSxaGurK5vf5ams5n7cdE7UCa4hghwYAlEhE_A_gFA/viewform"
+    response = "Exit Tickets…\nhttps://docs.google.com/forms/d/e/1FAIpQLSdCHYfZzSxaGurK5vf5ams5n7cdE7UCa4hghwYAlEhE_A_gFA/viewform"
     await ctx.send(response)
 
 
 @bot.command(name='hwlink', help='Link to submit your hw.')
 async def hwlink(ctx):
 
-    response = "HW Submission - https://docs.google.com/forms/d/1pyy5-MMDmUkkupg8m659ZGNawQpGFz71HSXcv_xAx2g/viewform?edit_requested=true"
+    response = "HW Submission\n https://docs.google.com/forms/d/1pyy5-MMDmUkkupg8m659ZGNawQpGFz71HSXcv_xAx2g/viewform?edit_requested=true"
     await ctx.send(response)
 
 
@@ -93,7 +93,7 @@ async def algos(ctx):
 
 @bot.command(name='alex', help='Alex\'s YouTube Channel')
 async def alex(ctx):
-    msg = f'I am not as good as Alex at making YouTube tutorials(for now)... so go check out his channel instead of mine. https://www.youtube.com/channel/UCoc4UCEetAt3htM3hV1dQgQ'
+    msg = f'I am not as good as Alex at making YouTube tutorials(for now)... so go check out his channel instead of mine.\nhttps://www.youtube.com/channel/UCoc4UCEetAt3htM3hV1dQgQ'
     await ctx.send(msg)
 
 
@@ -105,7 +105,7 @@ async def devnursery(ctx):
 
 @bot.command(name='nasa', help='JoeBot\'s favorite website')
 async def nasa(ctx):
-    msg = f'I love this NASA website on Mars... Click on the link and open up your chrome dev tools to investigate their tech. https://mars.nasa.gov/'
+    msg = f'I love this NASA website on Mars... Click on the link and open up your chrome dev tools to investigate their tech.\n https://mars.nasa.gov/'
     await ctx.send(msg)
 
 
@@ -123,7 +123,7 @@ async def greece(ctx):
         'https://images.unsplash.com/photo-1498712964741-5d33ab9e5017?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
     ]
 
-    love_greece = 'I love Greece...'
+    love_greece = 'I love Greece... \n'
     response = random.choice(greece_pics)
     msg = love_greece + response
     await ctx.send(msg)
@@ -160,6 +160,148 @@ async def partytime(ctx):
     drink = random.choice(drinks)
     response = msg + drink
     await ctx.send(response)
+
+
+@bot.command(name='unit1', help='All lectures for Unit 1')
+async def unit1(ctx):
+    unit1_lectures = [
+        'Intro to HTML and CSS - https://git.generalassemb.ly/SEIR-831/intro-to-html-and-css\n',
+        'Flexbox - https://git.generalassemb.ly/SEIR-831/intro-to-flexbox\n',
+        'CSS Grid - https://git.generalassemb.ly/SEIR-831/intro-to-css-grid\n',
+        'Responsive Design - https://git.generalassemb.ly/SEIR-831/responsive-web-design\n',
+        'Datatypes and JS Basics - https://git.generalassemb.ly/SEIR-831/intro_to_datatypes\n',
+        'Control Flow - https://git.generalassemb.ly/SEIR-831/intro_to_control_flow\n',
+        'Arrays - https://git.generalassemb.ly/SEIR-831/intro_to_arrays\n',
+        'Objects - https://git.generalassemb.ly/SEIR-831/intro_to_objects\n',
+        'Javascript Functions - https://git.generalassemb.ly/SEIR-831/js-functions\n',
+        'Array Methods and Callback - https://git.generalassemb.ly/SEIR-831/js-array-methods\n',
+        'Intro to JQuery - https://git.generalassemb.ly/SEIR-831/js-intro-to-jquery\n',
+        'JQuery Capture Input - https://git.generalassemb.ly/SEIR-831/js-dom-capture-input\n',
+        'AJAX - https://git.generalassemb.ly/SEIR-831/js-jquery-ajax\n',
+        'Google Sheet API - https://git.generalassemb.ly/SEIR-831/js-google-sheet-as-json-using-ajax?organization=SEIR-831&organization=SEIR-831'
+    ]
+
+    for i in unit1_lectures:
+        await ctx.send(i)
+
+
+@bot.command(name='unit1hw', help='All Unit 1 HW')
+async def unit1_hw(ctx):
+    unit1_hw = [
+        'Instagram Quotes - https://git.generalassemb.ly/SEIR-831/W01D01-HW',
+        'Startup Matchmaker - https://git.generalassemb.ly/SEIR-831/W01D02-HW',
+        'Grid Layouts - https://git.generalassemb.ly/SEIR-831/W01D03-HW',
+        'Responsive Design - https://git.generalassemb.ly/SEIR-831/W01D04-HW',
+        'JS Practice - https://git.generalassemb.ly/SEIR-831/W1D05-Homework/blob/master/README.md',
+        'Tamagotchi - https://git.generalassemb.ly/SEIR-831/Tamagotchi',
+        'Functions Practice - https://git.generalassemb.ly/SEIR-831/W02D03-HW',
+        'Random Imager - https://git.generalassemb.ly/SEIR-831/W02D04-HW/blob/master/README.md'
+    ]
+
+    for i in unit1_hw:
+        await ctx.send(i)
+
+
+@bot.command(name='unit2hw', help='All Unit 2 HW')
+async def unit2_hw(ctx):
+    unit2_hw = [
+        'React Dashboard - https://git.generalassemb.ly/SEIR-831/W04D01',
+        'Films Part 1 - https://git.generalassemb.ly/SEIR-831/W04D02-HW',
+        'Films Part 2 - https://git.generalassemb.ly/SEIR-831/W04D03-HW',
+        'Films Part 3 - https://git.generalassemb.ly/SEIR-831/W04D04-HW',
+        'Korilla Receipts - https://git.generalassemb.ly/SEIR-831/W04D05-HW/blob/master/README.md',
+        'Weather App - https://git.generalassemb.ly/SEIR-831/W05D01-HW?organization=SEIR-831&organization=SEIR-831',
+        'iStocks - https://git.generalassemb.ly/SEIR-831/W05D02-HW?organization=SEIR-831&organization=SEIR-831'
+    ]
+
+    for i in unit2_hw:
+        await ctx.send(i)
+
+
+@bot.command(name='unit2', help='All lectures for Unit 2')
+async def unit2(ctx):
+    unit2_lectures = [
+        'Intro to React and Components - https://git.generalassemb.ly/SEIR-831/react-intro-to-react-and-components/blob/master/1.%20intro-to-react.md',
+        'Nested Components - https://git.generalassemb.ly/SEIR-831/react-intro-to-react-and-components/blob/master/3.%20nested-components.md',
+        'Passing React Props - https://git.generalassemb.ly/SEIR-831/react-passing-props',
+        'Intro to State - https://git.generalassemb.ly/SEIR-831/react-intro-to-state',
+        'Complex Version of State - https://git.generalassemb.ly/SEIR-831/react-intro-to-state/blob/master/complex-versions-of-state.md',
+        'Lifting State - https://git.generalassemb.ly/SEIR-831/react-intro-to-state/blob/master/lifting-state.md',
+        'Controlled v. Uncontrolled Inputs - https://git.generalassemb.ly/SEIR-831/react-controlled-vs-uncontrolled-inputs',
+        'React and AJAX - https://git.generalassemb.ly/SEIR-831/react-fetching-data-public',
+        'React useEffect - https://git.generalassemb.ly/SEIR-831/react_useffect',
+        'React Router - https://git.generalassemb.ly/SEIR-831/react-router',
+        'React useContext - https://git.generalassemb.ly/SEIR-831/react-useContext'
+    ]
+
+    for i in unit2_lectures:
+        await ctx.send(i)
+
+
+@bot.command(name='unit3', help='All lectures for Unit 3')
+async def unit3(ctx):
+    unit3_lectures = [
+        'Intro to Express - https://git.generalassemb.ly/SEIR-831/express-intro-to-express?organization=SEIR-831&organization=SEIR-831',
+        'URL and Query Parameters - https://git.generalassemb.ly/SEIR-831/express-url-and-query-parameters?organization=SEIR-831&organization=SEIR-831',
+        'Express CRUD - https://git.generalassemb.ly/SEIR-831/express-crud-router',
+        'Express Router - https://git.generalassemb.ly/SEIR-831/express-crud-router',
+        'Intro to MongoDB - https://git.generalassemb.ly/SEIR-831/mongo-intro?organization=SEIR-831&organization=SEIR-831',
+        'Intro to Mongoose - https://git.generalassemb.ly/SEIR-831/intro-to-mongoose',
+        'Express with Mongoose Full CRUD - https://git.generalassemb.ly/SEIR-831/express-mongoose-crud',
+        'Express with React - https://git.generalassemb.ly/SEIR-831/ExpressFrontendDeploy',
+        'Deployment - https://git.generalassemb.ly/SEIR-831/ExpressFrontendDeploy/blob/master/deploy.md',
+        'Group Git - https://git.generalassemb.ly/SEIR-831/git-group-git'
+    ]
+
+    for i in unit3_lectures:
+        await ctx.send(i)
+
+
+@bot.command(name='unit3hw', help='All Unit 3 HW')
+async def unit3_hw(ctx):
+    unit3_hw = [
+        'Birds - https://git.generalassemb.ly/SEIR-831/W07D01-HW',
+        'Pokemon - https://git.generalassemb.ly/SEIR-831/W07D02-HW?organization=SEIR-831&organization=SEIR-831',
+        'MongoDB Query Practice - https://git.generalassemb.ly/SEIR-831/W07D03-HW',
+        'Mongoose Practice - https://git.generalassemb.ly/SEIR-831/W07D04-HW/blob/master/README.md',
+        'Cookbook API - https://git.generalassemb.ly/SEIR-831/Cookbook-API/blob/master/README.md',
+        'Cookbook API Part 2 - https://git.generalassemb.ly/SEIR-831/W08D01-HW',
+        'MERN Lab - https://git.generalassemb.ly/SEIR-831/mern-lab?organization=SEIR-831&organization=SEIR-831'
+    ]
+
+    for i in unit3_hw:
+        await ctx.send(i)
+
+
+@bot.command(name='unit4', help='All lectures for Unit 4')
+async def unit4(ctx):
+    unit4_lectures = [
+        'Intro to Ruby - https://git.generalassemb.ly/SEIR-831/ruby-intro-to-ruby',
+        'Ruby Arrays and Hashes - https://git.generalassemb.ly/SEIR-831/ruby-intro-to-ruby/blob/master/ARRAYS_HASH.md',
+        'Ruby Blocks Enumerables - https://git.generalassemb.ly/SEIR-831/ruby_blocks_enumerables',
+        'Ruby Classes - https://git.generalassemb.ly/SEIR-831/ruby_classes',
+        'SQL - https://git.generalassemb.ly/SEIR-831/sql-intro',
+        'Intro to Rails - https://git.generalassemb.ly/SEIR-831/intro_to_rails',
+        'Rails Controller - https://git.generalassemb.ly/SEIR-831/rails_controllers/blob/master/morning_rails_controllers.md'
+    ]
+
+    for i in unit4_lectures:
+        await ctx.send(i)
+
+
+@bot.command(name='unit4hw', help='All Unit 4 HW')
+async def unit4_hw(ctx):
+    unit4_hw = [
+        'Ruby Practice - https://git.generalassemb.ly/SEIR-831/W10D01-HW?organization=SEIR-831&organization=SEIR-831',
+        'Ruby Algos - https://git.generalassemb.ly/SEIR-831/W10D02-HW',
+        'Dojo Fighter - https://git.generalassemb.ly/SEIR-831/RubyDojoFighter',
+        'NFL SQL - https://git.generalassemb.ly/SEIR-831/W10D04-HW',
+        'Glitch in the Matrix - https://git.generalassemb.ly/SEIR-831/glitch_in_the_matrix',
+        'Tweetr - https://git.generalassemb.ly/SEIR-831/W11D01-HW/blob/master/README.md'
+    ]
+
+    for i in unit4_hw:
+        await ctx.send(i)
 
 
 bot.run(TOKEN)

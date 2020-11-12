@@ -20,11 +20,14 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's stor
 | Deploy JoeBot | H | 2hr(s) |  |
 | Trivia Game | H | 20hr(s) |  |
 | DM Member on Join | M | 1hr(s) | 3hr(s) |
-| Command: unit1 | H | 2hr(s) |  |
-| Command: unit2 | H | 2hr(s) |  |
-| Command: unit3 | H | 2hr(s) |  |
-| Command: unit4 | H | 2hr(s) |  |
+| Command: unit1 | H | 2hr(s) | 1hr(s) |
+| Command: unit2 | H | 2hr(s) | 1hr(s) |
+| Command: unit3 | H | 2hr(s) | 1hr(s) |
+| Command: unit4 | H | 2hr(s) | 1hr(s) |
 | Command: learn | H | 3hr(s) |  |
+| Command: labs | M | 2hr(s) |  |
+| Command: algorithms | M | 2hr(s) |  |
+| Command: hw | M | 3hr(s) |  |
 | Command: hwlink | L | 0.5hr(s) | 0.5hr(s) |
 | Command: exit | L | 0.5hr(s) | 0.5hr(s) |
 | Command: saveme | L | 0.5hr(s) | 1hr(s) |
@@ -53,12 +56,18 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's stor
     - An array of lecture notes for each unit
 - Command: learn
     - An array of new tech we've seen/heard of but was not thoroughly taught
+- Command: labs
+    - List of all labs throughout the cohort
+- Command: hw
+    - List of all assigned homework
 - Command: hwlink
     - Link to HW Submission
 - Command: exit
     - Link to our favorite thing to do... Filling out exit tickets
 - Command: saveme
     - JoeBot will ask the user who sent the command to share their screen
+- Command: algorithms
+    - List of all algorithms during the morning and assigned for homework
 - Command: algos
     - Illustrious Kenny Cruz
 - Command: alex
