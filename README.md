@@ -8,3 +8,15 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's stor
 - [Python 3.9](https://www.python.org/)
 
 ## Features
+
+- Exit Ticket Link
+- HW Submission Link
+- All lecture notes for Unit 1-4
+- All HW assignments for Unit 1-4
+- All labs for Unit 1-4
+- All bonus lectures during project weeks
+- All algorithms assigned for morning exercise and homework
+- Link to Alex's YouTube channel and website
+- IPA suggestions
+- Suggestions for learning something new
+- Greece Pictures
