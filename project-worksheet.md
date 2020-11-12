@@ -7,7 +7,7 @@
 
 ## Description
 
-JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's store with plenty of memey commands throughout SEIR-831 cohort, but as well as a plethora of resource materials. From checking what is the very first lecture of class to the last day of class, JoeBot will provide you with any previous lectures you need. There is one command to rule them all with JoeBot and that command is... !exit (link to class exit tickets).
+JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equipped with plenty of memey commands compiled throughout SEIR-831 cohort, but also has a plethora of resource materials. From checking what is the very first lecture of class to the last day of class, JoeBot will provide you with any previous lectures you need. There is one command to rule them all with JoeBot and that command is... !exit (link to class exit tickets).
 
 ## Time/Priority Matrix
 
@@ -28,6 +28,7 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's stor
 | Command: labs | M | 2hr(s) |  |
 | Command: algorithms | M | 2hr(s) |  |
 | Command: hw | M | 3hr(s) |  |
+| Command: bonuslecture | M | 2hr(s) | 1.5hr(s) |
 | Command: hwlink | L | 0.5hr(s) | 0.5hr(s) |
 | Command: exit | L | 0.5hr(s) | 0.5hr(s) |
 | Command: saveme | L | 0.5hr(s) | 1hr(s) |
@@ -37,7 +38,7 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's stor
 | Command: nasa | L | 0.5hr(s) | 0.5hr(s) |
 | Command: greece | L | 1hr(s) | 1hr(s) |
 | Command: partytime | L | 1hr(s) | 1hr(s) |
-| TOTAL | H | 82.5hr(s) | 0 |
+| TOTAL | H | 0 | 0 |
 
 ## MVP/POSTMVP
 
@@ -62,6 +63,8 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's stor
     - List of all assigned homework
 - Command: hwlink
     - Link to HW Submission
+- Command: bonuslecture
+    - List of all our bonus lectures during project week
 - Command: exit
     - Link to our favorite thing to do... Filling out exit tickets
 - Command: saveme
