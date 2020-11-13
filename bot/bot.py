@@ -15,7 +15,7 @@ from discord.ext import commands
 intents = discord.Intents.default()
 intents.members = True  # Subscribe to the privileged members intent.
 
-load_dotenv()
+# load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('GUILD_TOKEN')
 
