@@ -13,5 +13,11 @@ what_to_learn = [
     'NextJS - https://nextjs.org/',
     'React Native - https://reactnative.dev/',
     'Auth for Ruby on Rails - https://tuts.alexmercedcoder.com/ruby-tut/',
-    'DevNursery - https://main.devnursery.com/'
+    'DevNursery - https://main.devnursery.com/',
+    'Dark Mode - https://dev.to/ditarahma08/dark-mode-with-css-variable-1p57',
+    '9 Projects for Front End - https://dev.to/simonholdorf/9-projects-you-can-do-to-become-a-frontend-master-in-2020-n2h',
+    'Tips For Being a Great Programmer - https://dev.to/emmabostian/101-tips-for-being-a-great-programmer-human-36nl',
+    'Interview Study Guide - https://dev.to/seattledataguy/the-interview-study-guide-for-software-engineers-764',
+    '70 JS Interview Questions - https://dev.to/macmacky/70-javascript-interview-questions-5gfi',
+    'CSS Variables - https://css-tricks.com/difference-between-types-of-css-variables/'
 ]
