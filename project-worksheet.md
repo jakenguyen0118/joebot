@@ -2,8 +2,8 @@
 
 ## Project Links
 
-- [Heroku Deployment]()
-- [GitHub Repository]()
+- [Heroku Deployment](https://seir-joebot.herokuapp.com/)
+- [GitHub Repository](https://github.com/jakenguyen0118/joebot)
 
 ## Description
 
@@ -13,18 +13,18 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 
 |  Feature  |  Priority  |  Estimated Time  |  Actual Time  |
 |  ---  |  :---:  |   :---:  |  :---:  |
-| Discord API Docs | H | 10hr(s) |  |
+| Discord API Docs | H | 10hr(s) | 7hr(s) |
 | Python | H | 30hr(s) |  |
 | discord.py | H | 2hr(s) | 2hr(s) |
 | Set up JoeBot to Server | H | 3hr(s) | 5hr(s) |
-| Deploy JoeBot | H | 2hr(s) |  |
+| Deploy JoeBot | H | 2hr(s) | 6hr(s) |
 | Trivia Game | H | 20hr(s) |  |
+| Dev.to API for articles | H | 4hr(s) | 5hr(s) |
 | DM Member on Join | M | 1hr(s) | 3hr(s) |
 | Command: unit1 | H | 2hr(s) | 1hr(s) |
 | Command: unit2 | H | 2hr(s) | 1hr(s) |
 | Command: unit3 | H | 2hr(s) | 1hr(s) |
 | Command: unit4 | H | 2hr(s) | 1hr(s) |
-| Command: learn | H | 3hr(s) |  |
 | Command: labs | M | 2hr(s) |  |
 | Command: algorithms | M | 2hr(s) |  |
 | Command: hw | M | 3hr(s) |  |
@@ -38,7 +38,8 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 | Command: nasa | L | 0.5hr(s) | 0.5hr(s) |
 | Command: greece | L | 1hr(s) | 1hr(s) |
 | Command: partytime | L | 1hr(s) | 1hr(s) |
-| TOTAL | H | 0 | 0 |
+| Command: datenight | L | 0.5hr(s) | 0.5hr(s) |
+| TOTAL | H | 95hrs | 40hrs |
 
 ## MVP/POSTMVP
 
@@ -53,23 +54,22 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
         - Ruby
         - React?
 - DM members on joining server
-- Command: unit1-4
+- Dev.to API to recommend random articles
+- Command: unit1-4 (SEIR831 Specific)
     - An array of lecture notes for each unit
-- Command: learn
-    - An array of new tech we've seen/heard of but was not thoroughly taught
-- Command: labs
+- Command: labs (SEIR831 Specific)
     - List of all labs throughout the cohort
-- Command: hw
+- Command: hw (SEIR831 Specific)
     - List of all assigned homework
 - Command: hwlink
     - Link to HW Submission
-- Command: bonuslecture
+- Command: bonuslecture (SEIR831 Specific)
     - List of all our bonus lectures during project week
 - Command: exit
     - Link to our favorite thing to do... Filling out exit tickets
 - Command: saveme
     - JoeBot will ask the user who sent the command to share their screen
-- Command: algorithms
+- Command: algorithms (SEIR831 Specific)
     - List of all algorithms during the morning and assigned for homework
 - Command: algos
     - Illustrious Kenny Cruz
@@ -83,6 +83,8 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
     - Pictures of JoeBot's favorite countries
 - Command: partytime
     - Recommendations of JoeBot's highest rated IPAs
+- Command: datenight
+    - Recommendations of JoeBot's destinations for datenights!
 
 #### POSTMVP
 
