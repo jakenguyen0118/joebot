@@ -18,7 +18,6 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 | discord.py | H | 2hr(s) | 2hr(s) |
 | Set up JoeBot to Server | H | 3hr(s) | 5hr(s) |
 | Deploy JoeBot | H | 2hr(s) | 6hr(s) |
-| Trivia Game | H | 20hr(s) |  |
 | Dev.to API for articles | H | 4hr(s) | 5hr(s) |
 | DM Member on Join | M | 1hr(s) | 3hr(s) |
 | Command: unit1 | H | 2hr(s) | 1hr(s) |
@@ -27,7 +26,7 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 | Command: unit4 | H | 2hr(s) | 1hr(s) |
 | Command: labs | M | 2hr(s) |  |
 | Command: algorithms | M | 2hr(s) |  |
-| Command: hw | M | 3hr(s) |  |
+| Command: hw | M | 3hr(s) | 1.5hr(s) |
 | Command: bonuslecture | M | 2hr(s) | 1.5hr(s) |
 | Command: hwlink | L | 0.5hr(s) | 0.5hr(s) |
 | Command: exit | L | 0.5hr(s) | 0.5hr(s) |
@@ -39,7 +38,7 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 | Command: greece | L | 1hr(s) | 1hr(s) |
 | Command: partytime | L | 1hr(s) | 1hr(s) |
 | Command: datenight | L | 0.5hr(s) | 0.5hr(s) |
-| TOTAL | H | 95hrs | 40hrs |
+| TOTAL | H | 75hrs | 41.5hrs |
 
 ## MVP/POSTMVP
 
@@ -47,12 +46,7 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 
 - Functional discord bot
 - Deploy JoeBot
-- Learn Python to make Trivia Game
-- Trivia Game
-    - Categories
-        - Javascript
-        - Ruby
-        - React?
+- Learn Python
 - DM members on joining server
 - Dev.to API to recommend random articles
 - Command: unit1-4 (SEIR831 Specific)
@@ -88,5 +82,10 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 
 #### POSTMVP
 
+- Trivia Game
+    - Categories
+        - General
+        - Javascript
+        - React
 - Add more categories and questions to trivia game
 - More typical bot commands (managing server roles, deleting messages, etc)
