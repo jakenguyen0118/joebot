@@ -49,7 +49,10 @@ unit4_lectures = [
     'Ruby Classes - https://git.generalassemb.ly/SEIR-831/ruby_classes',
     'SQL - https://git.generalassemb.ly/SEIR-831/sql-intro',
     'Intro to Rails - https://git.generalassemb.ly/SEIR-831/intro_to_rails',
-    'Rails Controller - https://git.generalassemb.ly/SEIR-831/rails_controllers/blob/master/morning_rails_controllers.md'
+    'Rails Controller - https://git.generalassemb.ly/SEIR-831/rails_controllers/blob/master/morning_rails_controllers.md',
+    'Rails One to Many - https://git.generalassemb.ly/SEIR-831/rails_one_to_many?organization=SEIR-831&organization=SEIR-831',
+    'React Frontend with Chart.js - https://git.generalassemb.ly/SEIR-831/rails_one_to_many/blob/master/afternoon_one_to_many_continued.md',
+    'Rails Many to Many - https://git.generalassemb.ly/SEIR-831/rails-many-to-many?organization=SEIR-831&organization=SEIR-831'
 ]
 
 hw_unit1 = [
@@ -89,7 +92,8 @@ hw_unit4 = [
     'Dojo Fighter - https://git.generalassemb.ly/SEIR-831/RubyDojoFighter',
     'NFL SQL - https://git.generalassemb.ly/SEIR-831/W10D04-HW',
     'Glitch in the Matrix - https://git.generalassemb.ly/SEIR-831/glitch_in_the_matrix',
-    'Tweetr - https://git.generalassemb.ly/SEIR-831/W11D01-HW/blob/master/README.md'
+    'Tweetr - https://git.generalassemb.ly/SEIR-831/W11D01-HW/blob/master/README.md',
+    'Products and Reviews - https://git.generalassemb.ly/SEIR-831/W11D02-HW?organization=SEIR-831&organization=SEIR-831'
 ]
 
 bonus_lectures = [
@@ -150,4 +154,32 @@ date_suggestions = [
     'Let me think... Ah! Stop & Shop...',
     'You should try a place my wife and I love... Stop & Shop...',
     'Have you heard of this little place called... Stop & Shop?'
+]
+
+unit_projects = [
+    'Erik Shelton\'s Portfolio - https://e-shelton98.github.io/Portfolio',
+    'Chase Wood\'s Portfolio - https://chasewood.github.io/Unit-1-Project',
+    'Hannah Trask\'s Portfolio - https://hannahtrask.github.io',
+    'Jaime Bondoc\'s Portfolio - https://jb0nd87.github.io',
+    'Frieda Abdo\'s Portfolio - https://friedaabdo.github.io/friedaabdo-github.io',
+    'Jake Nguyen\'s Portfolio - https://jakenewyen.com/',
+    'Gore Sometimes\' Portfolio - http://www.portfoliobysometimes.com/',
+    'Erik Shelton\'s Magic the Gathering Deck Maker - https://e-shelton-mtgdeckmaker.netlify.app/',
+    'Chase Wood\'s Magic the Gathering Card Search - https://mtgcardsearch.netlify.app/',
+    'Jaime Bondoc\'s Comic Search - https://comic-search.netlify.app/',
+    'Gore Sometimes\' Destiny Lovebook - https://cayde6.netlify.app/',
+    'Frieda Abdo\'s Blackjack - https://friedasblackjackapp.netlify.app/',
+    'Jake Nguyen\'s League of Legends App - https://jakelolapp.netlify.app/',
+    'Kilah Willingham\'s Dance App - https://kilahscongress.netlify.app/',
+    'Gore, Bojan, Sampreet, and Shayan\'s Cineprime - https://cineprime.netlify.app/',
+    'Hannah, Kilah, Sara, and Chase\'s It\'s All Gouda - https://its-all-gouda-frontend.netlify.app/',
+    'Erik, Frieda, and Sean\'s Sticky Task - https://sticky-task.netlify.app/',
+    'Jake, Allisyn, and Lien\'s Countlories - https://countlories.netlify.app/',
+    'Sam, Jaime, Kim, and Quinton\'s pause.app - https://5f9c6effa69446000788a77d--pause-app.netlify.app/',
+    'Jake Nguyen\'s Tunr - https://tunr-ror.netlify.app/',
+    'Hannah Trask\'s Tunr - https://tunr-hannah.netlify.app/',
+    'Jaime Bondoc\'s Tunr - https://tunr-on-rye.netlify.app/',
+    'Gore Sometimes\' Tunr - https://tun3r.netlify.app/',
+    'Erik Shelton\'s Tunr - https://zealous-wiles-a3de63.netlify.app/',
+    'Kilah Willingham\'s Tunr - https://minitunrkw.netlify.app/'
 ]

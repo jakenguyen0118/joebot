@@ -1,5 +1,5 @@
 # comment out dotenv before pushing
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
 import json
 import requests
@@ -14,7 +14,7 @@ intents = discord.Intents.default()
 intents.members = True
 
 # comment out loadenv before pushing
-# load_dotenv()
+load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('GUILD_TOKEN')
 
@@ -180,5 +180,14 @@ async def date_night(ctx):
 
     msg = random.choice(date_suggestions)
     await ctx.send(msg)
+
+
+@bot.command(name='projects', help='I am so proud of my students\' projects, so please take a look!')
+async def projects(ctx):
+
+    msg = random.choice(unit_projects)
+    response = 'Check out... ' + msg
+    await ctx.send(response)
+
 
 bot.run(TOKEN)
