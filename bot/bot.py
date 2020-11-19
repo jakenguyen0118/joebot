@@ -1,5 +1,5 @@
 # comment out dotenv before pushing
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 import json
 import requests
@@ -8,18 +8,22 @@ import random
 import os
 import discord
 from data import *
+# import Trivia
+# from Question import Question
+# from trivia_questions import *
 from discord.ext import commands
 
 intents = discord.Intents.default()
 intents.members = True
 
 # comment out loadenv before pushing
-load_dotenv()
+# load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('GUILD_TOKEN')
 
 bot = discord.Client()
 bot = commands.Bot(command_prefix='!', intents=intents)
+# Trivia = Trivia.Trivia(bot)
 
 
 @bot.event
@@ -38,30 +42,36 @@ async def on_ready():
 async def on_member_join(member):
     await member.create_dm()
     await member.dm_channel.send(
-        f'Hi {member.name}, welcome to SEIR-831 JoeBot server!'
+        f'Hi {member.name}, welcome to JoeBot\'s Playground! Use the !help command in the server to get started.'
     )
 
 
 @bot.command(name='article', help='Read some interesting articles!')
 async def article(ctx):
-    parameters = {'per_page': 50, 'page': random.randint(1,460)}
+    parameters = {'per_page': 50, 'page': random.randint(1, 460)}
     r = requests.get('https://dev.to/api/articles', params=parameters)
     article_url = r.json()[random.randint(0, 50)]['url']
-    await ctx.send(article_url)
+    e = discord.Embed(title='Check this out...')
+    e.add_field(name='Article', value=article_url, inline=False)
+    await ctx.send(embed=e)
 
 
 @bot.command(name='exit', help='Link to submit our exit tickets.')
 async def exit(ctx):
 
-    response = "Exit Tickets…\nhttps://docs.google.com/forms/d/e/1FAIpQLSdCHYfZzSxaGurK5vf5ams5n7cdE7UCa4hghwYAlEhE_A_gFA/viewform"
-    await ctx.send(response)
+    response = "https://docs.google.com/forms/d/e/1FAIpQLSdCHYfZzSxaGurK5vf5ams5n7cdE7UCa4hghwYAlEhE_A_gFA/viewform"
+    e = discord.Embed(title='Exit tickets...')
+    e.add_field(name='SEIR-831 Exit Tickets', value=response, inline=False)
+    await ctx.send(embed=e)
 
 
 @bot.command(name='hwlink', help='Link to submit your hw.')
 async def hwlink(ctx):
 
     response = "HW Submission\n https://docs.google.com/forms/d/1pyy5-MMDmUkkupg8m659ZGNawQpGFz71HSXcv_xAx2g/viewform?edit_requested=true"
-    await ctx.send(response)
+    e = discord.Embed(title='HW Submission...')
+    e.add_field(name='SEIR-831 HW Submission', value=response, inline=False)
+    await ctx.send(embed=e)
 
 
 @bot.command(name='saveme', help='Joe will ask you to share screen so that he can save you.')
@@ -78,38 +88,46 @@ async def algos(ctx):
 
 @bot.command(name='alex', help='Alex\'s YouTube Channel')
 async def alex(ctx):
-    msg = f'I am not as good as Alex at making YouTube tutorials(for now)... so go check out his channel instead of mine.\nhttps://www.youtube.com/channel/UCoc4UCEetAt3htM3hV1dQgQ'
-    await ctx.send(msg)
+    msg = f'https://www.youtube.com/channel/UCoc4UCEetAt3htM3hV1dQgQ'
+    e = discord.Embed(title='Alex\'s YouTube...')
+    e.add_field(name='I am not as good as Alex at making YouTube tutorials(for now)... so go check out his channel instead of mine.',
+                value=msg, inline=False)
+    await ctx.send(embed=e)
 
 
 @bot.command(name='devnursery', help='All things you wish to learn taught by Alex Merced.')
 async def devnursery(ctx):
-    msg = f'Wish to learn anything and everything? Go to https://main.devnursery.com/'
-    await ctx.send(msg)
+    msg = f'Go to https://main.devnursery.com/'
+    e = discord.Embed(title='DevNursery')
+    e.add_field(name='Wish to learn anything and everything?',
+                value=msg, inline=False)
+    await ctx.send(embed=e)
 
 
 @bot.command(name='nasa', help='JoeBot\'s favorite website')
 async def nasa(ctx):
-    msg = f'I love this NASA website on Mars... Click on the link and open up your chrome dev tools to investigate their tech.\n https://mars.nasa.gov/'
-    await ctx.send(msg)
+    msg = f'https://mars.nasa.gov/'
+    e = discord.Embed(title='NASA Mars')
+    e.add_field(name='I love this NASA website on Mars... Click on the link and open up your chrome dev tools to investigate their tech...', value=msg, inline=False)
+    await ctx.send(embed=e)
 
 
 @bot.command(name='greece', help='JoeBot\'s favorite destination')
 async def greece(ctx):
 
-    love_greece = 'I love Greece... \n'
     response = random.choice(greece_pics)
-    msg = love_greece + response
-    await ctx.send(msg)
+    e = discord.Embed(title='I love Greece...')
+    e.add_field(name='I can\'t wait to go here...', value=response, inline=False)
+    await ctx.send(embed=e)
 
 
 @bot.command(name='partytime', help='Recommendation for drinks')
 async def partytime(ctx):
 
-    msg = 'I would recommend '
     drink = random.choice(drinks)
-    response = msg + drink
-    await ctx.send(response)
+    e = discord.Embed(title='Party Time')
+    e.add_field(name='I recommend...', value=drink, inline=False)
+    await ctx.send(embed=e)
 
 
 @bot.command(name='unit1', help='All lectures for Unit 1')
@@ -186,8 +204,18 @@ async def date_night(ctx):
 async def projects(ctx):
 
     msg = random.choice(unit_projects)
-    response = 'Check out... ' + msg
-    await ctx.send(response)
+    e = discord.Embed(title='Student Projects')
+    e.add_field(name='Check out...', value=msg, inline=False)
+    await ctx.send(embed=e)
+
+
+# @bot.command(name='trivia', help='Test your general or coding knowledge with JoeBot!')
+# async def trivia(ctx):
+    # e = discord.Embed(title='Welcome to JoeBot Trivia!')
+    # e.add_field(name='Which category would you like to be tested on?', value='0. Quit\n1. General\n2. Javascript\n3. React', inline=True)
+    # await ctx.send(embed=e)
+
+    # await Trivia.start(ctx.channel)
 
 
 bot.run(TOKEN)
