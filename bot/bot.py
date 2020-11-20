@@ -13,15 +13,17 @@ from data import *
 # from trivia_questions import *
 from discord.ext import commands
 
-intents = discord.Intents.default()
+intents = discord.Intents.all()
 intents.members = True
+intents.messages = True
 
 # comment out loadenv before pushing
 # load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('GUILD_TOKEN')
+WEATHERAPI = os.getenv('WEATHERAPI')
 
-bot = discord.Client()
+bot = discord.Client(intents=intents)
 bot = commands.Bot(command_prefix='!', intents=intents)
 # Trivia = Trivia.Trivia(bot)
 
@@ -209,13 +211,81 @@ async def projects(ctx):
     await ctx.send(embed=e)
 
 
+@bot.command(name='weather', help='JoeBot will check the weather of any location you desire!')
+async def weather(ctx, *, zipcode: int):
+    weather_zip = str(zipcode).zfill(5)
+    base_url = "https://api.openweathermap.org/data/2.5/weather?"
+    complete_url = base_url + 'zip=' + weather_zip + '&appid=' + WEATHERAPI
+    response = requests.get(complete_url)
+    json = response.json()
+    channel = ctx.message.channel
+
+    if json['cod'] != '404':
+        async with channel.typing():
+            y = json['main']
+            city_name = json['name']
+            current_temperature = y['temp']
+            current_temperature_celcius = str(round(current_temperature - 273.15))
+            current_temperature_f = str(round(((current_temperature - 273.15) * 1.8) + 32))
+            current_pressure = y['pressure']
+            current_humidity = y['humidity']
+            z = json['weather']
+            weather_description = z[0]['description']
+            e = discord.Embed(title=f'Weather in {city_name}')
+            e.add_field(name='Description', value=f'**{weather_description}**', inline=False)
+            e.add_field(name='Temperature(F)', value=f'**{current_temperature_f}**', inline=False)
+            e.add_field(name='Temperature(C)', value=f'**{current_temperature_celcius}**', inline=False)
+            e.add_field(name="Humidity(%)", value=f"**{current_humidity}%**", inline=False)
+            e.add_field(name="Atmospheric Pressure(hPa)", value=f"**{current_pressure}hPa**", inline=False)
+            e.set_thumbnail(url="https://i.ibb.co/CMrsxdX/weather.png")
+            e.set_footer(text=f"Requested by {ctx.author.name}")
+            
+        await channel.send(embed=e)
+    else:
+        await channel.send('City not found.')
+
+
 # @bot.command(name='trivia', help='Test your general or coding knowledge with JoeBot!')
 # async def trivia(ctx):
-    # e = discord.Embed(title='Welcome to JoeBot Trivia!')
-    # e.add_field(name='Which category would you like to be tested on?', value='0. Quit\n1. General\n2. Javascript\n3. React', inline=True)
-    # await ctx.send(embed=e)
+#     e = discord.Embed(title='Welcome to JoeBot Trivia!')
+#     e.add_field(name='Which category would you like to be tested on?', value='0. Quit\n1. General\n2. Javascript\n3. React', inline=True)
+#     await ctx.send(embed=e)
 
-    # await Trivia.start(ctx.channel)
+#     @bot.event
+#     async def on_message(message):
+#         # def run_trivia(questions):
+#         #     score = 0
+#         #     random.shuffle(questions)
+#         #     for index, question in questions:
+#         #         print(question.prompt)
+#         #         answer = input("Please answer with a, b, c, d or quit: ")
+#         #         if answer == question.answer:
+#         #             print("Correct!")
+#         #             score += 1
+#         #         elif answer == "quit":
+#         #             print("Sorry you didn\'t finish the game, but you scored " + str(score) + " points!")
+#         #             quit()
+#         #         else:
+#         #             print("You did not answer correctly... The answer was " + question.answer)
+#         #     print("You got " + str(score) + " questions correct!")
+
+#         if message.content.startswith('0'):
+#             channel = message.channel
+#             await channel.send('Thank you for playing JoeBot trivia!')
+#             quit()
+        
+#         if message.content.startswith('1'):
+#             channel = message.channel
+#             await channel.send('Starting JoeBot\'s General Trivia...')
+
+#         if message.content.startswith('2'):
+#             channel = message.channel
+#             await channel.send('Starting JoeBot\'s Javascript Trivia...')
+
+#         if message.content.startswith('3'):
+#             channel = message.channel
+#             await channel.send('Starting JoeBot\'s React Trivia...')
+            
 
 
 bot.run(TOKEN)

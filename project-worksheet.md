@@ -28,6 +28,7 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 | Command: algorithms | M | 2hr(s) |  |
 | Command: hw | M | 3hr(s) | 1.5hr(s) |
 | Command: bonuslecture | M | 2hr(s) | 1.5hr(s) |
+| Command: weather | M | 3hr(s) | 4hr(s) |
 | Command: hwlink | L | 0.5hr(s) | 0.5hr(s) |
 | Command: exit | L | 0.5hr(s) | 0.5hr(s) |
 | Command: saveme | L | 0.5hr(s) | 1hr(s) |
@@ -38,7 +39,7 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 | Command: greece | L | 1hr(s) | 1hr(s) |
 | Command: partytime | L | 1hr(s) | 1hr(s) |
 | Command: datenight | L | 0.5hr(s) | 0.5hr(s) |
-| TOTAL | H | 75hrs | 41.5hrs |
+| TOTAL | H | 78hrs | 45.5hrs |
 
 ## MVP/POSTMVP
 
@@ -59,6 +60,8 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
     - Link to HW Submission
 - Command: bonuslecture (SEIR831 Specific)
     - List of all our bonus lectures during project week
+- Command: weather
+    - Enter a zipcode along with the weather command to get weather info
 - Command: exit
     - Link to our favorite thing to do... Filling out exit tickets
 - Command: saveme
