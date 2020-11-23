@@ -127,12 +127,9 @@ async def nasa(ctx):
 
 @bot.command(name='greece', help='JoeBot\'s favorite destination')
 async def greece(ctx):
-
-    response = random.choice(greece_pics)
-    e = discord.Embed(title='I love Greece...')
-    e.add_field(name='I can\'t wait to go here...',
-                value=response, inline=False)
-    await ctx.send(embed=e)
+    msg = 'I love Greece...\n'
+    greece = random.choice(greece_pics)
+    await ctx.send(msg + greece)
 
 
 @bot.command(name='partytime', help='Recommendation for drinks')

@@ -14,7 +14,7 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 |  Feature  |  Priority  |  Estimated Time  |  Actual Time  |
 |  ---  |  :---:  |   :---:  |  :---:  |
 | Discord API Docs | H | 10hr(s) | 7hr(s) |
-| Python | H | 30hr(s) | 25hr(s) |
+| Python | H | 30hr(s) | 40hr(s) |
 | discord.py | H | 2hr(s) | 2hr(s) |
 | Set up JoeBot to Server | H | 3hr(s) | 5hr(s) |
 | Deploy JoeBot | H | 2hr(s) | 6hr(s) |
@@ -39,7 +39,7 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 | Command: greece | L | 1hr(s) | 1hr(s) |
 | Command: partytime | L | 1hr(s) | 1hr(s) |
 | Command: datenight | L | 0.5hr(s) | 0.5hr(s) |
-| TOTAL | H | 78hrs | 74.5hrs |
+| TOTAL | H | 78hrs | 89.5hrs |
 
 ## MVP/POSTMVP
 
@@ -49,7 +49,8 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 - Deploy JoeBot
 - Learn Python
 - DM members on joining server
-- Dev.to API to recommend random articles
+- Command: articles
+    - Dev.to API to recommend random articles
 - Command: unit1-4 (SEIR831 Specific)
     - An array of lecture notes for each unit
 - Command: labs (SEIR831 Specific)
@@ -61,13 +62,12 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 - Command: bonuslecture (SEIR831 Specific)
     - List of all our bonus lectures during project week
 - Command: weather
+    - OpenWeatherAPI
     - Enter a zipcode along with the weather command to get weather info
 - Command: exit
     - Link to our favorite thing to do... Filling out exit tickets
 - Command: saveme
     - JoeBot will ask the user who sent the command to share their screen
-- Command: algorithms (SEIR831 Specific)
-    - List of all algorithms during the morning and assigned for homework
 - Command: algos
     - Illustrious Kenny Cruz
 - Command: alex

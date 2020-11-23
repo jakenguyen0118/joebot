@@ -14,6 +14,8 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's stor
 ## APIs Used
 
 - [Dev.to](https://docs.dev.to/api/#operation/getArticles)
+- [OpenWeather](https://openweathermap.org/current)
+- [CodeWars](https://dev.codewars.com/)
 
 ## Features
 
