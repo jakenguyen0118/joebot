@@ -182,7 +182,13 @@ greece_pics = [
     'https://images.unsplash.com/photo-1560703650-ef3e0f254ae0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
     'https://images.unsplash.com/photo-1508855173839-a6d69c12573a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
     'https://images.unsplash.com/photo-1536514072410-5019a3c69182?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1498712964741-5d33ab9e5017?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
+    'https://images.unsplash.com/photo-1498712964741-5d33ab9e5017?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+    'https://s19623.pcdn.co/wp-content/uploads/2015/11/ios-greece-off-season-guide.jpg',
+    'https://i.dailymail.co.uk/1s/2019/05/03/20/13064042-0-image-a-97_1556913486930.jpg',
+    'https://www.matt-holidays.com/wp-content/uploads/2020/01/ios-greece1-2.jpg',
+    'https://www.greektravel.com/greekislands/ios/ios-port.jpg',
+    'https://www.thegreektravel.com/ios/ios-mylopotas-0.jpg',
+    'https://1.bp.blogspot.com/-6LZqCPOAkGs/WbaPAOHohPI/AAAAAAAAJ50/Ljkmvxmn604uSVMmBvjT_XahG0ByQ-SCACLcBGAs/s1600/IMG_5941.jpg'
 ]
 
 date_suggestions = [
@@ -240,6 +246,5 @@ codewars_slugs = [
     'moving-zeros-to-the-end',
     'snail',
     'next-bigger-number-with-the-same-digits',
-    'square-into-squares-protect-trees',
-    ''
+    'square-into-squares-protect-trees'
 ]
