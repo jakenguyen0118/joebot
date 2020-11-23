@@ -96,6 +96,39 @@ hw_unit4 = [
     'Products and Reviews - https://git.generalassemb.ly/SEIR-831/W11D02-HW?organization=SEIR-831&organization=SEIR-831'
 ]
 
+lab_unit1 = [
+    'Startup Matchmaker - https://git.generalassemb.ly/SEIR-831/W01D02-HW/blob/master/startup-matchmaker/README.md',
+    'Mars Responsive - https://git.generalassemb.ly/SEIR-831/mars-responsive-website-exercise',
+    'Minions - https://git.generalassemb.ly/SEIR-831/js-array-methods/blob/master/labs/minions.md'
+]
+
+lab_unit2 = [
+    'React Floorplan - https://git.generalassemb.ly/SEIR-831/react-intro-to-react-and-components/blob/master/lab/react-floor-plan.md',
+    'React Cities - https://git.generalassemb.ly/SEIR-831/react-intro-to-state/blob/master/labs/react-cities.md',
+    'Shopping Cart - https://git.generalassemb.ly/SEIR-831/react-intro-to-state/blob/master/labs/shopping-cart.md',
+    'Korilla Receipts - https://git.generalassemb.ly/SEIR-831/react-controlled-vs-uncontrolled-inputs/blob/master/labs/korilla-receipts.md',
+    'useContext Building Lab - https://git.generalassemb.ly/SEIR-831/useContext-Lab/blob/master/readme.md'
+]
+
+lab_unit3 = [
+    'Angry Birds - https://git.generalassemb.ly/SEIR-831/express-node-MVC-angry-birds-exercise',
+    'Mongo Queries - https://git.generalassemb.ly/SEIR-831/mongo-lab?organization=SEIR-831&organization=SEIR-831',
+    'Yum Lab - https://git.generalassemb.ly/SEIR-831/yum-lab',
+    'Giphy Lab - https://git.generalassemb.ly/SEIR-831/express-mongo-giphy-lab',
+    'Cookbook Part 2 - https://git.generalassemb.ly/SEIR-831/W08D01-HW',
+    'MERN Lab - https://git.generalassemb.ly/SEIR-831/mern-lab?organization=SEIR-831&organization=SEIR-831'
+]
+
+lab_unit4 = [
+    'Ruby Blocks and Enumerables - https://git.generalassemb.ly/SEIR-831/ruby_enumerables_lab',
+    'Ruby Classes - https://git.generalassemb.ly/SEIR-831/ruby_classes_lab',
+    'Carmen SQL Lab - https://git.generalassemb.ly/SEIR-831/SQL-Carmen-Lab',
+    'Rails Models - https://git.generalassemb.ly/SEIR-831/intro_to_rails_afternoon_lab?organization=SEIR-831&organization=SEIR-831',
+    'One to Many - https://git.generalassemb.ly/SEIR-831/rails_one_to_many_lab?organization=SEIR-831&organization=SEIR-831',
+    'Many to Many - https://git.generalassemb.ly/SEIR-831/rails-many-to-many-lab?organization=SEIR-831&organization=SEIR-831',
+    'Rails Tunr - https://git.generalassemb.ly/SEIR-831/rails-mini-project'
+]
+
 bonus_lectures = [
     'Bootstrap - https://generalassembly.zoom.us/rec/play/z2-8Kpnw2wy9cs3-e487uE9V5_hDVW6ydJy9NxmYweSfjtIFm4T62GCkF3ugQ2o3W3DQ8VotF7USwAYt.ijbAmC7VkKk85bJN?continueMode=true&_x_zm_rtaid=3bVT4xT7REeITbb0YuPahg.1605148344782.533adc8fc7d4b1a2ba80136f8fce7bed&_x_zm_rhtaid=371',
     'CSS Responsive Designs - https://git.generalassemb.ly/SEIR-831/bonus_lectures/tree/master/css-grid-responsive-designs',
@@ -109,7 +142,10 @@ bonus_lectures = [
     'Angular (ask Alex for password) - https://generalassembly.zoom.us/rec/share/t-BNHRhxYW6JrTBVT07mLPDtIRcAAPZ70wz5Cns0U5Jqv5j-TZcUbWUgd3zkN22_.QiHJOkyEY4B96XNQ',
     'Intro to Redux - https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w08d15/intro-to-redux.md',
     'Custom React Hooks - https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w08d16/intro-to-custom-hooks.md',
-    'StencilJS (ask Alex for password) - https://generalassembly.zoom.us/rec/share/7mmvql7UaNsU17ngohilhT7VMRoMcjid6S_gB5hJ2Xg-Ql-0wndZSRt1mYHQ.csNgVmeU3ov79G18'
+    'StencilJS (ask Alex for password) - https://generalassembly.zoom.us/rec/share/7mmvql7UaNsU17ngohilhT7VMRoMcjid6S_gB5hJ2Xg-Ql-0wndZSRt1mYHQ.csNgVmeU3ov79G18',
+    'Styled Components - https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w07d14/intro-to-styled-components.md',
+    'Intro to Python - https://git.generalassemb.ly/SEIR-831/intro-to-python',
+    'GraphQL - https://tuts.alexmercedcoder.com/graphql/'
 ]
 
 drinks = [
@@ -182,4 +218,28 @@ unit_projects = [
     'Gore Sometimes\' Tunr - https://tun3r.netlify.app/',
     'Erik Shelton\'s Tunr - https://zealous-wiles-a3de63.netlify.app/',
     'Kilah Willingham\'s Tunr - https://minitunrkw.netlify.app/'
+]
+
+codewars_slugs = [
+    'multiply',
+    'multiples-of-3-or-5',
+    'find-the-odd-int',
+    'vowel-count',
+    'sum-of-digits',
+    'persistent-bugger',
+    'stop-gninnips-my-sdrow',
+    'counting-duplicates',
+    'square-every-digit',
+    'shortest-word',
+    'your-order-please',
+    'exes-and-ohs',
+    'find-the-unique-number',
+    'directions-reduction',
+    'valid-parentheses',
+    'sum-of-pairs',
+    'moving-zeros-to-the-end',
+    'snail',
+    'next-bigger-number-with-the-same-digits',
+    'square-into-squares-protect-trees',
+    ''
 ]

@@ -8,9 +8,6 @@ import random
 import os
 import discord
 from data import *
-# import Trivia
-# from Question import Question
-# from trivia_questions import *
 from discord.ext import commands
 
 intents = discord.Intents.all()
@@ -25,7 +22,6 @@ WEATHERAPI = os.getenv('WEATHERAPI')
 
 bot = discord.Client(intents=intents)
 bot = commands.Bot(command_prefix='!', intents=intents)
-# Trivia = Trivia.Trivia(bot)
 
 
 @bot.event
@@ -84,8 +80,23 @@ async def saveme(ctx):
 
 @bot.command(name='algos', help='Hand it over to the illustrious Kenny Cruz.')
 async def algos(ctx):
-    msg = f'It\'s algos time... I will hand it off to the ever so illustrious Kenny Cruz.'
-    await ctx.send(msg)
+    codewars_api_url = 'https://www.codewars.com/api/v1/code-challenges/'
+    slugs = random.choice(codewars_slugs)
+    api_call = codewars_api_url + slugs
+    r = requests.get(api_call)
+    json = r.json()
+    channel = ctx.message.channel
+    algo_name = json['name']
+    algo_url = json['url']
+    algo_rank = json['rank']['name']
+
+    e = discord.Embed(
+        title='It\'s algos time... I\'ll hand it over to the illustrious Kenny Cruz...')
+    e.add_field(name='Name', value=algo_name, inline=False)
+    e.add_field(name='URL', value=algo_url, inline=False)
+    e.add_field(name='Rank', value=algo_rank, inline=False)
+
+    await channel.send(embed=e)
 
 
 @bot.command(name='alex', help='Alex\'s YouTube Channel')
@@ -119,7 +130,8 @@ async def greece(ctx):
 
     response = random.choice(greece_pics)
     e = discord.Embed(title='I love Greece...')
-    e.add_field(name='I can\'t wait to go here...', value=response, inline=False)
+    e.add_field(name='I can\'t wait to go here...',
+                value=response, inline=False)
     await ctx.send(embed=e)
 
 
@@ -146,6 +158,13 @@ async def unit1_hw(ctx):
         await ctx.send(i)
 
 
+@bot.command(name='unit1labs', help='All Unit 1 Labs')
+async def unit1_labs(ctx):
+
+    for i in lab_unit1:
+        await ctx.send(i)
+
+
 @bot.command(name='unit2', help='All lectures for Unit 2')
 async def unit2(ctx):
 
@@ -157,6 +176,13 @@ async def unit2(ctx):
 async def unit2_hw(ctx):
 
     for i in hw_unit2:
+        await ctx.send(i)
+
+
+@bot.command(name='unit2labs', help='All Unit 1 Labs')
+async def unit2_labs(ctx):
+
+    for i in lab_unit2:
         await ctx.send(i)
 
 
@@ -174,6 +200,13 @@ async def unit3_hw(ctx):
         await ctx.send(i)
 
 
+@bot.command(name='unit3labs', help='All Unit 1 Labs')
+async def unit3_labs(ctx):
+
+    for i in lab_unit3:
+        await ctx.send(i)
+
+
 @bot.command(name='unit4', help='All lectures for Unit 4')
 async def unit4(ctx):
 
@@ -185,6 +218,13 @@ async def unit4(ctx):
 async def unit4_hw(ctx):
 
     for i in hw_unit4:
+        await ctx.send(i)
+
+
+@bot.command(name='unit4labs', help='All Unit 1 Labs')
+async def unit4_labs(ctx):
+
+    for i in lab_unit4:
         await ctx.send(i)
 
 
@@ -216,8 +256,11 @@ async def weather(ctx, *, zipcode: int):
     weather_zip = str(zipcode).zfill(5)
     base_url = "https://api.openweathermap.org/data/2.5/weather?"
     complete_url = base_url + 'zip=' + weather_zip + '&appid=' + WEATHERAPI
+    ios_greece_url = 'http://api.openweathermap.org/data/2.5/weather?q=ios,gr&appid=ae98347c1a7e1fa54f1fe3e03a8d9f57'
+    r = requests.get(ios_greece_url)
     response = requests.get(complete_url)
     json = response.json()
+    x = r.json()
     channel = ctx.message.channel
 
     if json['cod'] != '404':
@@ -225,21 +268,50 @@ async def weather(ctx, *, zipcode: int):
             y = json['main']
             city_name = json['name']
             current_temperature = y['temp']
-            current_temperature_celcius = str(round(current_temperature - 273.15))
-            current_temperature_f = str(round(((current_temperature - 273.15) * 1.8) + 32))
+            current_temperature_celcius = str(
+                round(current_temperature - 273.15))
+            current_temperature_f = str(
+                round(((current_temperature - 273.15) * 1.8) + 32))
             current_pressure = y['pressure']
             current_humidity = y['humidity']
             z = json['weather']
+            ios = x['main']
+            ios_city = x['name']
+            ios_current_temp = ios['temp']
+            ios_current_temp_c = str(round(ios_current_temp - 273.15))
+            ios_current_temp_f = str(
+                round(((ios_current_temp - 273.15) * 1.8) + 32))
+            ios_current_pressure = ios['pressure']
+            ios_current_humidity = ios['humidity']
+            ios_b = x['weather']
+            ios_weather_desc = ios_b[0]['description']
             weather_description = z[0]['description']
             e = discord.Embed(title=f'Weather in {city_name}')
-            e.add_field(name='Description', value=f'**{weather_description}**', inline=False)
-            e.add_field(name='Temperature(F)', value=f'**{current_temperature_f}**', inline=False)
-            e.add_field(name='Temperature(C)', value=f'**{current_temperature_celcius}**', inline=False)
-            e.add_field(name="Humidity(%)", value=f"**{current_humidity}%**", inline=False)
-            e.add_field(name="Atmospheric Pressure(hPa)", value=f"**{current_pressure}hPa**", inline=False)
+            e.add_field(name='Description',
+                        value=f'**{weather_description}**', inline=False)
+            e.add_field(name='Temperature(F)',
+                        value=f'**{current_temperature_f}**', inline=False)
+            e.add_field(name='Temperature(C)',
+                        value=f'**{current_temperature_celcius}**', inline=False)
+            e.add_field(name="Humidity(%)",
+                        value=f"**{current_humidity}%**", inline=False)
+            e.add_field(name="Atmospheric Pressure(hPa)",
+                        value=f"**{current_pressure}hPa**", inline=False)
+            e.add_field(name=f'But why go to {city_name} when you can go to {ios_city}, Greece!',
+                        value='Look at the weather at Ios!', inline=False)
+            e.add_field(name='Description',
+                        value=f'**{ios_weather_desc}**', inline=False)
+            e.add_field(name='Temperature(F)',
+                        value=f'**{ios_current_temp_f}**', inline=False)
+            e.add_field(name='Temperature(C)',
+                        value=f'**{ios_current_temp_c}**', inline=False)
+            e.add_field(name="Humidity(%)",
+                        value=f"**{ios_current_humidity}%**", inline=False)
+            e.add_field(name="Atmospheric Pressure(hPa)",
+                        value=f"**{ios_current_pressure}hPa**", inline=False)
             e.set_thumbnail(url="https://i.ibb.co/CMrsxdX/weather.png")
             e.set_footer(text=f"Requested by {ctx.author.name}")
-            
+
         await channel.send(embed=e)
     else:
         await channel.send('City not found.')
@@ -273,7 +345,7 @@ async def weather(ctx, *, zipcode: int):
 #             channel = message.channel
 #             await channel.send('Thank you for playing JoeBot trivia!')
 #             quit()
-        
+
 #         if message.content.startswith('1'):
 #             channel = message.channel
 #             await channel.send('Starting JoeBot\'s General Trivia...')
@@ -285,7 +357,6 @@ async def weather(ctx, *, zipcode: int):
 #         if message.content.startswith('3'):
 #             channel = message.channel
 #             await channel.send('Starting JoeBot\'s React Trivia...')
-            
 
 
 bot.run(TOKEN)

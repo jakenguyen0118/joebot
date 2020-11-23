@@ -14,7 +14,7 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 |  Feature  |  Priority  |  Estimated Time  |  Actual Time  |
 |  ---  |  :---:  |   :---:  |  :---:  |
 | Discord API Docs | H | 10hr(s) | 7hr(s) |
-| Python | H | 30hr(s) |  |
+| Python | H | 30hr(s) | 25hr(s) |
 | discord.py | H | 2hr(s) | 2hr(s) |
 | Set up JoeBot to Server | H | 3hr(s) | 5hr(s) |
 | Deploy JoeBot | H | 2hr(s) | 6hr(s) |
@@ -24,8 +24,8 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 | Command: unit2 | H | 2hr(s) | 1hr(s) |
 | Command: unit3 | H | 2hr(s) | 1hr(s) |
 | Command: unit4 | H | 2hr(s) | 1hr(s) |
-| Command: labs | M | 2hr(s) |  |
-| Command: algorithms | M | 2hr(s) |  |
+| Command: labs | M | 2hr(s) | 1hr(s) |
+| Command: algorithms | M | 2hr(s) | 3hr(s) |
 | Command: hw | M | 3hr(s) | 1.5hr(s) |
 | Command: bonuslecture | M | 2hr(s) | 1.5hr(s) |
 | Command: weather | M | 3hr(s) | 4hr(s) |
@@ -39,7 +39,7 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 | Command: greece | L | 1hr(s) | 1hr(s) |
 | Command: partytime | L | 1hr(s) | 1hr(s) |
 | Command: datenight | L | 0.5hr(s) | 0.5hr(s) |
-| TOTAL | H | 78hrs | 45.5hrs |
+| TOTAL | H | 78hrs | 74.5hrs |
 
 ## MVP/POSTMVP
 
