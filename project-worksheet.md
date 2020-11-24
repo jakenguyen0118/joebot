@@ -19,6 +19,7 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 | Set up JoeBot to Server | H | 3hr(s) | 5hr(s) |
 | Deploy JoeBot | H | 2hr(s) | 6hr(s) |
 | Dev.to API for articles | H | 4hr(s) | 5hr(s) |
+| OpenWeather API for weather | H | 2hr(s) | 3hr(s) |
 | DM Member on Join | M | 1hr(s) | 3hr(s) |
 | Command: unit1 | H | 2hr(s) | 1hr(s) |
 | Command: unit2 | H | 2hr(s) | 1hr(s) |
@@ -39,7 +40,8 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 | Command: greece | L | 1hr(s) | 1hr(s) |
 | Command: partytime | L | 1hr(s) | 1hr(s) |
 | Command: datenight | L | 0.5hr(s) | 0.5hr(s) |
-| TOTAL | H | 78hrs | 89.5hrs |
+| Command: projects | L | 0.5hr(s) | 1hr(s) |
+| TOTAL | H | 80hrs | 93.5hrs |
 
 ## MVP/POSTMVP
 
@@ -64,6 +66,7 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
 - Command: weather
     - OpenWeatherAPI
     - Enter a zipcode along with the weather command to get weather info
+    - Compares the weather with Ios, Greece
 - Command: exit
     - Link to our favorite thing to do... Filling out exit tickets
 - Command: saveme
@@ -82,13 +85,11 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's equi
     - Recommendations of JoeBot's highest rated IPAs
 - Command: datenight
     - Recommendations of JoeBot's destinations for datenights!
+- Command: projects
+    - Collection of student projects from SEIR-831
 
 #### POSTMVP
 
 - Trivia Game
-    - Categories
-        - General
-        - Javascript
-        - React
-- Add more categories and questions to trivia game
+    -Opentdb API
 - More typical bot commands (managing server roles, deleting messages, etc)

@@ -7,6 +7,7 @@ import asyncio
 import random
 import os
 import discord
+# import Question
 from data import *
 from discord.ext import commands
 
@@ -20,9 +21,11 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('GUILD_TOKEN')
 WEATHERAPI = os.getenv('WEATHERAPI')
 
+
 bot = discord.Client(intents=intents)
 bot = commands.Bot(command_prefix='!', intents=intents)
-
+# client = Question.Trivia()
+# client.run(TOKEN)
 
 @bot.event
 async def on_ready():
@@ -287,73 +290,30 @@ async def weather(ctx, *, zipcode: int):
             e.add_field(name='Description',
                         value=f'**{weather_description}**', inline=False)
             e.add_field(name='Temperature(F)',
-                        value=f'**{current_temperature_f}**', inline=False)
+                        value=f'{current_temperature_f}', inline=False)
             e.add_field(name='Temperature(C)',
-                        value=f'**{current_temperature_celcius}**', inline=False)
+                        value=f'{current_temperature_celcius}', inline=False)
             e.add_field(name="Humidity(%)",
-                        value=f"**{current_humidity}%**", inline=False)
+                        value=f"{current_humidity}%", inline=False)
             e.add_field(name="Atmospheric Pressure(hPa)",
-                        value=f"**{current_pressure}hPa**", inline=False)
+                        value=f"{current_pressure}hPa", inline=False)
             e.add_field(name=f'But why go to {city_name} when you can go to {ios_city}, Greece!',
                         value='Look at the weather at Ios!', inline=False)
             e.add_field(name='Description',
                         value=f'**{ios_weather_desc}**', inline=False)
             e.add_field(name='Temperature(F)',
-                        value=f'**{ios_current_temp_f}**', inline=False)
+                        value=f'{ios_current_temp_f}', inline=False)
             e.add_field(name='Temperature(C)',
-                        value=f'**{ios_current_temp_c}**', inline=False)
+                        value=f'{ios_current_temp_c}', inline=False)
             e.add_field(name="Humidity(%)",
-                        value=f"**{ios_current_humidity}%**", inline=False)
+                        value=f"{ios_current_humidity}%", inline=False)
             e.add_field(name="Atmospheric Pressure(hPa)",
-                        value=f"**{ios_current_pressure}hPa**", inline=False)
+                        value=f"{ios_current_pressure}hPa", inline=False)
             e.set_thumbnail(url="https://i.ibb.co/CMrsxdX/weather.png")
             e.set_footer(text=f"Requested by {ctx.author.name}")
 
         await channel.send(embed=e)
     else:
-        await channel.send('City not found.')
-
-
-# @bot.command(name='trivia', help='Test your general or coding knowledge with JoeBot!')
-# async def trivia(ctx):
-#     e = discord.Embed(title='Welcome to JoeBot Trivia!')
-#     e.add_field(name='Which category would you like to be tested on?', value='0. Quit\n1. General\n2. Javascript\n3. React', inline=True)
-#     await ctx.send(embed=e)
-
-#     @bot.event
-#     async def on_message(message):
-#         # def run_trivia(questions):
-#         #     score = 0
-#         #     random.shuffle(questions)
-#         #     for index, question in questions:
-#         #         print(question.prompt)
-#         #         answer = input("Please answer with a, b, c, d or quit: ")
-#         #         if answer == question.answer:
-#         #             print("Correct!")
-#         #             score += 1
-#         #         elif answer == "quit":
-#         #             print("Sorry you didn\'t finish the game, but you scored " + str(score) + " points!")
-#         #             quit()
-#         #         else:
-#         #             print("You did not answer correctly... The answer was " + question.answer)
-#         #     print("You got " + str(score) + " questions correct!")
-
-#         if message.content.startswith('0'):
-#             channel = message.channel
-#             await channel.send('Thank you for playing JoeBot trivia!')
-#             quit()
-
-#         if message.content.startswith('1'):
-#             channel = message.channel
-#             await channel.send('Starting JoeBot\'s General Trivia...')
-
-#         if message.content.startswith('2'):
-#             channel = message.channel
-#             await channel.send('Starting JoeBot\'s Javascript Trivia...')
-
-#         if message.content.startswith('3'):
-#             channel = message.channel
-#             await channel.send('Starting JoeBot\'s React Trivia...')
-
+        await channel.send('Please enter a valid zipcode')
 
 bot.run(TOKEN)

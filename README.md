@@ -19,14 +19,18 @@ JoeBot is a robotic clone of our wonderful lead instructor Joe Keohan. He's stor
 
 ## Features
 
+- JoeBot coming to the rescue by asking you to share screen
 - Exit Ticket Link
 - HW Submission Link
 - All lecture notes for Unit 1-4
 - All HW assignments for Unit 1-4
 - All labs for Unit 1-4
 - All bonus lectures during project weeks
-- All algorithms assigned for morning exercise and homework
 - Link to Alex's YouTube channel and website
-- IPA suggestions
-- Suggestions for learning something new
+- IPA suggestions for party time
 - Greece Pictures
+- Link to JoeBot's favorite website (Mars NASA)
+- APIs for the following:
+    - Random articles from dev.to
+    - Weather by zipcode from OpenWeather
+    - Selected algorithms from Codewars
