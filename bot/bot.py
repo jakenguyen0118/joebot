@@ -179,7 +179,7 @@ async def unit2_hw(ctx):
         await ctx.send(i)
 
 
-@bot.command(name='unit2labs', help='All Unit 1 Labs')
+@bot.command(name='unit2labs', help='All Unit 2 Labs')
 async def unit2_labs(ctx):
 
     for i in lab_unit2:
@@ -200,7 +200,7 @@ async def unit3_hw(ctx):
         await ctx.send(i)
 
 
-@bot.command(name='unit3labs', help='All Unit 1 Labs')
+@bot.command(name='unit3labs', help='All Unit 3 Labs')
 async def unit3_labs(ctx):
 
     for i in lab_unit3:
@@ -221,7 +221,7 @@ async def unit4_hw(ctx):
         await ctx.send(i)
 
 
-@bot.command(name='unit4labs', help='All Unit 1 Labs')
+@bot.command(name='unit4labs', help='All Unit 4 Labs')
 async def unit4_labs(ctx):
 
     for i in lab_unit4:
